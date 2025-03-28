@@ -20,21 +20,12 @@ class Person:
 
 
 person_instance = Person("Sahand", 20, 6)
-
-# Print the public attribute public_prop (should work)
 print("Public property:", person_instance.public_prop)
 
-# Try printing the private name property directly (this should cause an AttributeError)
 try:
     print(person_instance.__name)
 except AttributeError as e:
     print("AttributeError:", e)
-
-# Access the name via the magic getter
 print("Name via magic getter:", person_instance.name)
-
-# Modify the name using the magic setter (set the new name to Anna)
 person_instance.name = "Anna"
-
-# Print again to confirm the change
 print("Updated name via magic getter:", person_instance.name)
